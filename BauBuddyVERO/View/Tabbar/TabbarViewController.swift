@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  TabbarViewController.swift
 //  BauBuddyVERO
 //
-//  Created by Murat on 7.11.2023.
+//  Created by Murat on 8.11.2023.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class TabbarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
+    
 
 }
-
