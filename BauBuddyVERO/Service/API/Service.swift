@@ -11,6 +11,8 @@ import RxSwift
 
 class APIService {
 
+    //MARK: - LOGIN
+    
     func login(username: String, password: String) -> Observable<Auth> {
         return Observable.create { observer in
             let loginURL = API.baseURL + API.Path.login
@@ -18,7 +20,7 @@ class APIService {
                 "username": username,
                 "password": password
             ]
-
+            
             AF.request(loginURL, method: .post, parameters: credentials, encoding: JSONEncoding.default, headers: [API.Headers.authorization: API.Headers.basicAuthValue, API.Headers.contentType: API.Headers.applicationJSON]).responseDecodable(of: Auth.self) { response in
                 switch response.result {
                 case .success(let loginResponse):
@@ -28,12 +30,15 @@ class APIService {
                     observer.onError(self.mapError(error))
                 }
             }
-
+            
             return Disposables.create()
         }
-
-    func fetchTasks(accessToken: String) -> Observable<[Tasks]> {
-        return Observable.create { observer in
+    }
+//MARK: - FETCH TASK
+         
+        func fetchTasks(accessToken: String) -> Observable<[Tasks]> {
+        
+            return Observable.create { observer in
             let tasksURL = API.baseURL + API.Path.tasksSelect
             let headers: HTTPHeaders = [
                 API.Headers.authorization: "Bearer \(accessToken)"
@@ -53,8 +58,10 @@ class APIService {
                 
         }
     }
-}
-    private func mapError(_ error: AFError) -> NetworkError {
+
+    //MARK: - MAP NETWORK ERROR
+    
+     private func mapError(_ error: AFError) -> NetworkError {
         if let urlError = error.underlyingError as? URLError {
             switch urlError.code {
             case .notConnectedToInternet, .networkConnectionLost:
