@@ -83,18 +83,18 @@ class HomeViewController: UIViewController {
             .disposed(by: disposeBag)
         
         viewModel.isLoading
-               .observe(on: MainScheduler.instance)
-               .subscribe(onNext: { [weak self] isLoading in
-                   if !(self?.refreshControl.isRefreshing ?? false) {
-                       self?.activityIndicator.isHidden = !isLoading
-                       if isLoading {
-                           self?.activityIndicator.startAnimating()
-                       } else {
-                           self?.activityIndicator.stopAnimating()
-                       }
-                   }
-               })
-               .disposed(by: disposeBag)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] isLoading in
+                if !(self?.refreshControl.isRefreshing ?? false) {
+                    self?.activityIndicator.isHidden = !isLoading
+                    if isLoading {
+                        self?.activityIndicator.startAnimating()
+                    } else {
+                        self?.activityIndicator.stopAnimating()
+                    }
+                }
+            })
+            .disposed(by: disposeBag)
         
         let _ = searchField.rx.text.orEmpty
             .debounce(.milliseconds(Constants.debounceInterval), scheduler: MainScheduler.instance)
@@ -104,8 +104,24 @@ class HomeViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
     
+    
+    @IBAction func qrButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: Constants.mainStoryboardID, bundle: nil)
+        if let qrViewController = storyboard.instantiateViewController(withIdentifier: Constants.qrStoryboardID) as? QrViewController {
+            
+            qrViewController.viewModel = QRViewModel()
+            qrViewController.viewModel?.qrCodeResult
+                .subscribe(onNext: { [weak self] result in
+                    self?.searchField.text = result
+                    self?.viewModel.searchTasks(query: result)
+                })
+                .disposed(by: disposeBag)
+            
+            qrViewController.modalPresentationStyle = .automatic
+            self.present(qrViewController, animated: true, completion: nil)
+        }
+    }
 }
-
 //MARK: - UITableViewDelegate,UITableViewDataSource
 
 extension HomeViewController : UITableViewDelegate,UITableViewDataSource{
@@ -116,9 +132,7 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.taskCellIdentifier, for: indexPath) as! HomeTableViewCell
-        
         cell.viewModel = HomeCellViewModel(task: taskList[indexPath.row])
-        
         return cell
     }
 }

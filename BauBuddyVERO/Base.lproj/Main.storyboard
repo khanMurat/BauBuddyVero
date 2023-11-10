@@ -9,17 +9,60 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Qr View Controller-->
         <scene sceneID="NxX-7P-G3d">
             <objects>
-                <viewController id="WyD-vY-PnY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRScan" id="WyD-vY-PnY" customClass="QrViewController" customModule="BauBuddyVERO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="naC-P7-CJX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zy1-5C-KL4">
+                                <rect key="frame" x="0.0" y="59" width="393" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmS-Pc-WZk">
+                                        <rect key="frame" x="20" y="45" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="JT7-qJ-qzn"/>
+                                            <constraint firstAttribute="width" constant="35" id="VSV-aM-0vo"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="dismissButtonPressed:" destination="WyD-vY-PnY" eventType="touchUpInside" id="cL4-xG-bec"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR SCAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ier-en-AcI">
+                                        <rect key="frame" x="154.33333333333334" y="50.666666666666671" width="84.666666666666657" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstItem="ier-en-AcI" firstAttribute="centerX" secondItem="zy1-5C-KL4" secondAttribute="centerX" id="1Zs-JD-Q8H"/>
+                                    <constraint firstItem="DmS-Pc-WZk" firstAttribute="leading" secondItem="zy1-5C-KL4" secondAttribute="leading" constant="20" id="Wfa-77-I2h"/>
+                                    <constraint firstAttribute="height" constant="120" id="fKS-94-BPM"/>
+                                    <constraint firstAttribute="bottom" secondItem="DmS-Pc-WZk" secondAttribute="bottom" constant="40" id="hFl-za-Ddh"/>
+                                    <constraint firstItem="ier-en-AcI" firstAttribute="centerY" secondItem="DmS-Pc-WZk" secondAttribute="centerY" id="hos-OZ-Ee9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MsP-F9-QVb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MsP-F9-QVb" firstAttribute="trailing" secondItem="zy1-5C-KL4" secondAttribute="trailing" id="4bg-kr-sMf"/>
+                            <constraint firstItem="zy1-5C-KL4" firstAttribute="leading" secondItem="MsP-F9-QVb" secondAttribute="leading" id="OCx-6W-xVf"/>
+                            <constraint firstItem="zy1-5C-KL4" firstAttribute="top" secondItem="naC-P7-CJX" secondAttribute="topMargin" id="zY1-pV-Ifh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PwU-Uw-IdL"/>
+                    <connections>
+                        <outlet property="tabView" destination="zy1-5C-KL4" id="ICK-ON-iJZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y02-FW-iaM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +168,14 @@
                             <constraint firstItem="wNn-oa-jzl" firstAttribute="leading" secondItem="McC-FT-iLL" secondAttribute="leading" id="szO-g7-uu1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TASKS" id="Wvb-59-wct"/>
+                    <navigationItem key="navigationItem" title="TASKS" id="Wvb-59-wct">
+                        <barButtonItem key="rightBarButtonItem" image="qrcode" catalog="system" id="66E-EO-YPj">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="qrButtonPressed:" destination="9EC-fF-pqM" id="3Q9-aR-d31"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="VeU-cN-B3A" id="lQE-LB-uDx"/>
                         <outlet property="searchField" destination="wNn-oa-jzl" id="JXG-bR-WeD"/>
@@ -158,11 +208,16 @@
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="104"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

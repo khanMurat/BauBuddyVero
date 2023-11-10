@@ -9,9 +9,17 @@ import UIKit
 
 extension UIViewController {
     
-    func showErrorAlert(error: NetworkError) {
-           let alertController = UIAlertController(title: "Error", message: error.errorDescription, preferredStyle: .alert)
-           alertController.addAction(UIAlertAction(title: "OK", style: .default))
+    func showErrorAlert(error: NetworkError?) {
+        let alertController = UIAlertController(title: Constants.errorText, message: error?.errorDescription, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: Constants.okeyText, style: .default))
+           present(alertController, animated: true)
+       }
+    
+    func showSuccessAlert(message: String,completion: (() -> Void)? = nil) {
+        let alertController = UIAlertController(title: Constants.successText, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: Constants.okeyText, style: .default,handler: { _ in
+            completion?()
+        }))
            present(alertController, animated: true)
        }
 }

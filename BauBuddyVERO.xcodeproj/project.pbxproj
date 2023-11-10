@@ -20,13 +20,11 @@
 		FBBA52F92AFD653A0012C376 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA52F82AFD653A0012C376 /* Extensions.swift */; };
 		FBC573482AFC0BAE00555744 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC573472AFC0BAE00555744 /* NetworkError.swift */; };
 		FBC5734F2AFC142600555744 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5734E2AFC142600555744 /* HomeRepository.swift */; };
-		FBC573512AFC145100555744 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC573502AFC145100555744 /* TabbarViewController.swift */; };
 		FBC573552AFC148D00555744 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC573542AFC148D00555744 /* HomeViewModel.swift */; };
 		FBC573572AFC149E00555744 /* QrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC573562AFC149E00555744 /* QrViewModel.swift */; };
 		FBC573592AFC14D900555744 /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC573582AFC14D900555744 /* HomeCellViewModel.swift */; };
 		FBC5735B2AFC153500555744 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5735A2AFC153500555744 /* HomeTableViewCell.swift */; };
 		FBC5735D2AFC157400555744 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC5735C2AFC157400555744 /* LocalDataSource.swift */; };
-		FBD494D12AFAAD6E00A7B954 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FBD494D02AFAAD6E00A7B954 /* SDWebImage */; };
 		FBD494D42AFAAD7B00A7B954 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = FBD494D32AFAAD7B00A7B954 /* SQLite */; };
 		FBD494D72AFAAD8900A7B954 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FBD494D62AFAAD8900A7B954 /* Alamofire */; };
 		FBD494E22AFAB7D400A7B954 /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD494E12AFAB7D400A7B954 /* ApiConstant.swift */; };
@@ -49,7 +47,6 @@
 		FBBA52F82AFD653A0012C376 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FBC573472AFC0BAE00555744 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FBC5734E2AFC142600555744 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
-		FBC573502AFC145100555744 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		FBC573542AFC148D00555744 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FBC573562AFC149E00555744 /* QrViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrViewModel.swift; sourceTree = "<group>"; };
 		FBC573582AFC14D900555744 /* HomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellViewModel.swift; sourceTree = "<group>"; };
@@ -70,7 +67,6 @@
 				FBD494D42AFAAD7B00A7B954 /* SQLite in Frameworks */,
 				FBBA52F72AFD4B9C0012C376 /* RxSwift in Frameworks */,
 				FBBA52F52AFD4B9C0012C376 /* RxCocoa in Frameworks */,
-				FBD494D12AFAAD6E00A7B954 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,13 +92,13 @@
 		FB79E13D2AFA6DAD0095B469 /* BauBuddyVERO */ = {
 			isa = PBXGroup;
 			children = (
-				FBC5735E2AFC158A00555744 /* SupportingFiles */,
-				FB79E1592AFA6F810095B469 /* Service */,
-				FBC5734C2AFC140200555744 /* Repository */,
+				FB79E1522AFA6DF50095B469 /* Model */,
 				FB79E1542AFA6E070095B469 /* View */,
 				FB79E1532AFA6E010095B469 /* ViewModel */,
+				FBC5734C2AFC140200555744 /* Repository */,
+				FB79E1592AFA6F810095B469 /* Service */,
 				FB8F47F42AFE56160036F744 /* Utils */,
-				FB79E1522AFA6DF50095B469 /* Model */,
+				FBC5735E2AFC158A00555744 /* SupportingFiles */,
 				FB79E1442AFA6DAD0095B469 /* Main.storyboard */,
 				FB79E1472AFA6DAF0095B469 /* Assets.xcassets */,
 				FB79E14C2AFA6DAF0095B469 /* Info.plist */,
@@ -131,7 +127,6 @@
 		FB79E1542AFA6E070095B469 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FBC573492AFC13B100555744 /* Tabbar */,
 				FBC5734A2AFC13B700555744 /* Home */,
 				FBC5734B2AFC13BE00555744 /* Qr */,
 			);
@@ -172,14 +167,6 @@
 				FB8F47F72AFE57220036F744 /* Constants.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		FBC573492AFC13B100555744 /* Tabbar */ = {
-			isa = PBXGroup;
-			children = (
-				FBC573502AFC145100555744 /* TabbarViewController.swift */,
-			);
-			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		FBC5734A2AFC13B700555744 /* Home */ = {
@@ -259,7 +246,6 @@
 			);
 			name = BauBuddyVERO;
 			packageProductDependencies = (
-				FBD494D02AFAAD6E00A7B954 /* SDWebImage */,
 				FBD494D32AFAAD7B00A7B954 /* SQLite */,
 				FBD494D62AFAAD8900A7B954 /* Alamofire */,
 				FBBA52F42AFD4B9C0012C376 /* RxCocoa */,
@@ -336,7 +322,6 @@
 				FBC5735D2AFC157400555744 /* LocalDataSource.swift in Sources */,
 				FBD494EA2AFACC9600A7B954 /* HomeViewController.swift in Sources */,
 				FBC573552AFC148D00555744 /* HomeViewModel.swift in Sources */,
-				FBC573512AFC145100555744 /* TabbarViewController.swift in Sources */,
 				FB79E13F2AFA6DAD0095B469 /* AppDelegate.swift in Sources */,
 				FBC573592AFC14D900555744 /* HomeCellViewModel.swift in Sources */,
 				FB79E1412AFA6DAD0095B469 /* SceneDelegate.swift in Sources */,
@@ -499,10 +484,12 @@
 				DEVELOPMENT_TEAM = A94ZNMJSTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BauBuddyVERO/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To access your camera for scanning QR codes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -529,10 +516,12 @@
 				DEVELOPMENT_TEAM = A94ZNMJSTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BauBuddyVERO/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To access your camera for scanning QR codes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -616,11 +605,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FBBA52F32AFD4B9C0012C376 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		FBD494D02AFAAD6E00A7B954 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FBD494CF2AFAAD6E00A7B954 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
 		};
 		FBD494D32AFAAD7B00A7B954 /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;

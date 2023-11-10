@@ -12,8 +12,19 @@ class Constants {
     static let taskCellIdentifier = "TaskCell"
 
     // MARK: - Default Values
-    static let defaultRowHeight: CGFloat = 100.0
+    static let defaultRowHeight: CGFloat = 120.0
     static let debounceInterval: Int = 500 // For searchField debounce in milliseconds
     static let colorViewCornerRadius: CGFloat = 10.0
     
+    
+    //MARK: - Storyboard ID
+    
+    static let mainStoryboardID = "Main"
+    static let qrStoryboardID = "QRScan"
+    
+    //MARK: - Alert
+    
+    static let okeyText = "OK"
+    static let successText = "Success"
+    static let errorText = "Error"
 }

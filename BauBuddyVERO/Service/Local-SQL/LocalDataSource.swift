@@ -53,7 +53,7 @@ class LocalDataSource {
         }catch{
             print("Error checking for existing table: \(error)")
         }
-
+        
         do{
             try database.run(tasksTable.create(ifNotExists: true) { t in
                 t.column(id, primaryKey: .autoincrement)
@@ -66,7 +66,7 @@ class LocalDataSource {
             print(error.localizedDescription)
         }
     }
-
+    
     
     func insertTask(task:Tasks){
         
