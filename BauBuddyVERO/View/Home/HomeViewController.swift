@@ -10,11 +10,9 @@ import RxSwift
 import RxCocoa
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var searchField: UITextField!
-    
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var taskList = [Tasks]() {
@@ -25,10 +23,11 @@ class HomeViewController: UIViewController {
     private var viewModel: HomeViewModel!
     private let disposeBag = DisposeBag()
     private let repository = HomeRepository()
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupViewModel()
         setupUI()
         bindViewModel()
@@ -38,8 +37,16 @@ class HomeViewController: UIViewController {
     // MARK: - UI Setup
     
     private func setupUI() {
-        tableView.rowHeight = 100
+        tableView.rowHeight = Constants.defaultRowHeight
         activityIndicator.hidesWhenStopped = true
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+    }
+    
+    //MARK: - Actions
+    
+    @objc private func refreshData(_ sender: UIRefreshControl) {
+        viewModel.loginAndFetchTasks()
     }
     
     // MARK: - ViewModel Setup & Binding
@@ -53,29 +60,50 @@ class HomeViewController: UIViewController {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] tasks in
                 self?.taskList = tasks
+                if self?.refreshControl.isRefreshing ?? false {
+                    self?.refreshControl.endRefreshing()
+                }
             })
             .disposed(by: disposeBag)
-
+        
         viewModel.error
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] error in
                 if error != nil {
                     self?.showErrorAlert(error: error!)
+                    if ((self?.refreshControl.isRefreshing) != nil){
+                        self?.activityIndicator.isHidden = true
+                    }
+                    else{
+                        self?.refreshControl.endRefreshing()
+                        self?.activityIndicator.isHidden = false
+                    }
                 }
             })
             .disposed(by: disposeBag)
         
-        viewModel.isLoading.bind(to: activityIndicator.rx.isAnimating)
-            .disposed(by: disposeBag)
+        viewModel.isLoading
+               .observe(on: MainScheduler.instance)
+               .subscribe(onNext: { [weak self] isLoading in
+                   if !(self?.refreshControl.isRefreshing ?? false) {
+                       self?.activityIndicator.isHidden = !isLoading
+                       if isLoading {
+                           self?.activityIndicator.startAnimating()
+                       } else {
+                           self?.activityIndicator.stopAnimating()
+                       }
+                   }
+               })
+               .disposed(by: disposeBag)
         
         let _ = searchField.rx.text.orEmpty
-            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .debounce(.milliseconds(Constants.debounceInterval), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] query in
                 self?.viewModel.searchTasks(query: query)
             }).disposed(by: disposeBag)
     }
-
+    
 }
 
 //MARK: - UITableViewDelegate,UITableViewDataSource
@@ -87,7 +115,7 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! HomeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.taskCellIdentifier, for: indexPath) as! HomeTableViewCell
         
         cell.viewModel = HomeCellViewModel(task: taskList[indexPath.row])
         

@@ -17,6 +17,7 @@ class HomeViewModel {
     var error = BehaviorSubject<NetworkError?>(value: nil)
     private let disposeBag = DisposeBag()
     
+    
     init(repository: HomeRepository) {
         self.repository = repository
         bindTasks()

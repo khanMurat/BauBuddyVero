@@ -16,6 +16,7 @@ class LocalDataSource {
     private var database : Connection!
     
     let tasksTable = Table("Tasks")
+    let id = Expression<Int>("id")
     let taskName = Expression<String>("task")
     let titleText = Expression<String>("title")
     let descriptionText = Expression<String>("description")
@@ -42,9 +43,9 @@ class LocalDataSource {
     }
     
     private func createTable(){
-        
         do{
-            let existingTables = try database.scalar("SELECT name FROM sqlite_master WHERE type='table' AND name='Foods'")
+            
+            let existingTables = try database.scalar("SELECT name FROM sqlite_master WHERE type='table' AND name='Tasks'")
             if existingTables != nil{
                 print("Table already exists")
                 return
@@ -52,11 +53,11 @@ class LocalDataSource {
         }catch{
             print("Error checking for existing table: \(error)")
         }
-        
+
         do{
-            
-            try database.run(tasksTable.create { t in
-                t.column(taskName)
+            try database.run(tasksTable.create(ifNotExists: true) { t in
+                t.column(id, primaryKey: .autoincrement)
+                t.column(taskName, unique: true)
                 t.column(titleText)
                 t.column(descriptionText)
                 t.column(colorCode)
@@ -64,8 +65,8 @@ class LocalDataSource {
         }catch{
             print(error.localizedDescription)
         }
-        
     }
+
     
     func insertTask(task:Tasks){
         
@@ -110,7 +111,7 @@ class LocalDataSource {
         return Observable.create { observer in
             do {
                 var tasks = [Tasks]()
-                let queryResult = self.tasksTable.filter(self.titleText.like("%\(query)%"))
+                let queryResult = self.tasksTable.filter(self.titleText.like("%\(query)%") || self.taskName.like("%\(query)%"))
                 for task in try self.database.prepare(queryResult) {
                     let task = Tasks(task: task[self.taskName], title: task[self.titleText], description: task[self.descriptionText], colorCode: task[self.colorCode])
                     tasks.append(task)

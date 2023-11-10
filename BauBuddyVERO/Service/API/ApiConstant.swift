@@ -29,11 +29,11 @@ struct API {
 }
 
 struct Network {
-    static let networkError: String = "Network error"
-    static let invalidEndpoint: String = "Error is caused because of invalid endpoint"
-    static let invalidURL: String = "Error is caused because of invalid URL"
-    static let invalidBodyParameter: String = "Error is caused because of body parameters"
-    static let invalidResponse: String = "Error is caused because of invalid network response"
-    static let invalidData: String = "Error is caused because of invalid data"
-    static let noNetwork: String = "Not connected to Network or network connection lost"
+    static let networkError: String = "Network error occurred"
+    static let invalidEndpoint: String = "Invalid endpoint error"
+    static let invalidURL: String = "URL format error"
+    static let invalidBodyParameter: String = "Body parameter error"
+    static let invalidResponse: String = "Response error"
+    static let invalidData: String = "Data format error"
+    static let noNetwork: String = "No network connection"
 }

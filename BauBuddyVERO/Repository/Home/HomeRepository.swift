@@ -18,7 +18,7 @@ class HomeRepository {
         
     func loginAndFetchTasks() {
         isLoading.accept(true)
-        apiService.login(username: "365", password: "1")
+        apiService.login(username: API.Credentials.username, password: API.Credentials.password)
             .flatMapLatest { [weak self] auth -> Observable<[Tasks]> in
                 self?.apiService.fetchTasks(accessToken: auth.oauth.accessToken) ?? .empty()
             }

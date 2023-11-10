@@ -27,7 +27,7 @@ class HomeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        hexColorView.layer.cornerRadius = 10
+        hexColorView.layer.cornerRadius = Constants.colorViewCornerRadius
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
