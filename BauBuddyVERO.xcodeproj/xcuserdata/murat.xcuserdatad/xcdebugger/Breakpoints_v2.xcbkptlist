@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "604BDBA9-559D-48DD-BBF3-E0A6A92E40FE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D541DF5F-45E1-4954-8510-AF788D02BAA8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BauBuddyVERO/Service/API/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "mapError(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D541DF5F-45E1-4954-8510-AF788D02BAA8 - f768855a41cfd96a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "624">
+               </Location>
+               <Location
+                  uuid = "D541DF5F-45E1-4954-8510-AF788D02BAA8 - f768855a41cfd924"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE59A97F-D0AC-4D9F-8518-9F77EA1DA987"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BauBuddyVERO/Service/API/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "mapError(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CE59A97F-D0AC-4D9F-8518-9F77EA1DA987 - f768855a41cfd905"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1388">
+               </Location>
+               <Location
+                  uuid = "CE59A97F-D0AC-4D9F-8518-9F77EA1DA987 - f768855a41cfd905"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "887924A9-D73B-402C-946F-4891DF31E0B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BauBuddyVERO/Service/API/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "mapError(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "887924A9-D73B-402C-946F-4891DF31E0B3 - f768855a41cfd924"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "1168">
+               </Location>
+               <Location
+                  uuid = "887924A9-D73B-402C-946F-4891DF31E0B3 - f768855a41cfd924"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A8C511F-1542-4338-9AA2-EF56D8FBDAFC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BauBuddyVERO/Service/API/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "mapError(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1A8C511F-1542-4338-9AA2-EF56D8FBDAFC - f768855a41cfd94b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "1A8C511F-1542-4338-9AA2-EF56D8FBDAFC - f768855a41cfd94b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "624">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CFF4D2B-8028-4473-B597-B8AAE740EEE2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BauBuddyVERO/Service/API/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "mapError(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5CFF4D2B-8028-4473-B597-B8AAE740EEE2 - f768855a41cfd6c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "1452">
+               </Location>
+               <Location
+                  uuid = "5CFF4D2B-8028-4473-B597-B8AAE740EEE2 - f768855a41cfd6e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1388">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FC94ACE-82CF-4F8F-983D-169FA0BC65C5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BauBuddyVERO/Service/API/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "mapError(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8FC94ACE-82CF-4F8F-983D-169FA0BC65C5 - f768855a41cfd681"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "1540">
+               </Location>
+               <Location
+                  uuid = "8FC94ACE-82CF-4F8F-983D-169FA0BC65C5 - f768855a41cfd6a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1452">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69A3BFA3-AEA2-49D6-BB93-CF8812BCCBE9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BauBuddyVERO/Service/API/Service.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "mapError(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "69A3BFA3-AEA2-49D6-BB93-CF8812BCCBE9 - f768855a41cfd6c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "1452">
+               </Location>
+               <Location
+                  uuid = "69A3BFA3-AEA2-49D6-BB93-CF8812BCCBE9 - f768855a41cfd6a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BauBuddyVERO.APIService.mapError(Alamofire.AFError) -&gt; BauBuddyVERO.NetworkError"
+                  moduleName = "BauBuddyVERO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/murat/Desktop/Masau%CC%88stu%CC%88%20-%20Murat%20MacBook%20Air/MySwiftProjects/BauBuddyVERO/BauBuddyVERO/Service/API/Service.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1452">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

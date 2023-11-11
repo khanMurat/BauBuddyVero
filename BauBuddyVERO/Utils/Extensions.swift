@@ -10,7 +10,7 @@ import UIKit
 extension UIViewController {
     
     func showErrorAlert(error: NetworkError?) {
-        let alertController = UIAlertController(title: Constants.errorText, message: error?.errorDescription, preferredStyle: .alert)
+        let alertController = UIAlertController(title: Constants.errorText, message: error?.description, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: Constants.okeyText, style: .default))
            present(alertController, animated: true)
        }

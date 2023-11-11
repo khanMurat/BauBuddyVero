@@ -50,12 +50,11 @@ class APIService {
                     observer.onNext(tasks)
                     observer.onCompleted()
                 case .failure(let error):
+                    print(error)
                     observer.onError(self.mapError(error))
                 }
             }
-
             return Disposables.create()
-                
         }
     }
 

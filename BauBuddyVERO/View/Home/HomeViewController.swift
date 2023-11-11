@@ -15,7 +15,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    private var taskList = [Tasks]()
+    private var taskList = [Tasks](){
+        didSet{self.tableView.reloadData()}
+    }
     private var viewModel: HomeViewModel!
     private let disposeBag = DisposeBag()
     private let repository = HomeRepository()
@@ -69,6 +71,7 @@ class HomeViewController: UIViewController {
                     self?.showErrorAlert(error: error!)
                     if ((self?.refreshControl.isRefreshing) != nil){
                         self?.activityIndicator.isHidden = true
+                        self?.refreshControl.endRefreshing()
                     }
                     else{
                         self?.refreshControl.endRefreshing()
