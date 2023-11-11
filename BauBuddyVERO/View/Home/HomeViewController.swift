@@ -15,11 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    private var taskList = [Tasks]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    private var taskList = [Tasks]()
     private var viewModel: HomeViewModel!
     private let disposeBag = DisposeBag()
     private let repository = HomeRepository()
@@ -103,7 +99,6 @@ class HomeViewController: UIViewController {
                 self?.viewModel.searchTasks(query: query)
             }).disposed(by: disposeBag)
     }
-    
     
     @IBAction func qrButtonPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: Constants.mainStoryboardID, bundle: nil)
