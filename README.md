@@ -1,7 +1,5 @@
 # BauBuddyVero
 
-BauBuddy is an iOS application designed to help construction site workers manage tasks efficiently. The app interacts with a remote API to fetch tasks, which users can view, search, and filter through a user-friendly interface. It utilizes a robust local storage system for offline access, ensuring vital task information is available anytime, anywhere.
-
 ## Features
 - Fetch and display a list of tasks from a remote API.
 - Offline access to tasks using a local SQL database.
